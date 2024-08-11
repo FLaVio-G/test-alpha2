@@ -19,7 +19,7 @@ const ProductManagement = () => {
     createProduct,
     updateProduct,
     deleteProduct,
-    getProduct,
+    // getProduct,
   } = useApi();
 
   const [products, setProducts] = useState<Product[]>([]);

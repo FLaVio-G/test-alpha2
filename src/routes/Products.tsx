@@ -72,30 +72,30 @@ const ProductManagement = () => {
       setFormError("Erro ao salvar produto");
     }
   };
-  const handleSearchClick = async () => {
-    if (searchTerm === "") {
-      fetchProducts();
-    } else {
-      const id = Number(searchTerm);
+  // const handleSearchClick = async () => {
+  //   if (searchTerm === "") {
+  //     fetchProducts();
+  //   } else {
+  //     const id = Number(searchTerm);
 
-      if (!isNaN(id)) {
-        try {
-          const response = await getProduct(id);
+  //     if (!isNaN(id)) {
+  //       try {
+  //         const response = await getProduct(id);
 
-          if (response && response.data && response.data.product) {
-            setProducts([response.data.product]);
-          } else {
-            setProducts([]);
-          }
-        } catch (error) {
-          setProducts([]);
-        }
-      } else {
-        console.error("ID do produto deve ser um número");
-        setProducts([]);
-      }
-    }
-  };
+  //         if (response && response.data && response.data.product) {
+  //           setProducts([response.data.product]);
+  //         } else {
+  //           setProducts([]);
+  //         }
+  //       } catch (error) {
+  //         setProducts([]);
+  //       }
+  //     } else {
+  //       console.error("ID do produto deve ser um número");
+  //       setProducts([]);
+  //     }
+  //   }
+  // };
 
   const filterProducts = () => {
     if (searchTerm === "") {
